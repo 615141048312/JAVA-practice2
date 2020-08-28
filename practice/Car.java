@@ -3,6 +3,7 @@ package practice;
 public class Car {
 	private double fuelCost;
 	private double fuelAmount;
+	// 模範解答では使わない
 	private double fuelLevel;
 	
 	// コンストラクタを作成
@@ -14,12 +15,12 @@ public class Car {
 	// moveメソッド
 	public void move(int mileage) {
 		System.out.println(mileage + "km 走ります");
-		fuelLevel = fuelAmount - (mileage / fuelCost);
+		// 模範解答 this.fuelAmount -= (km / fuelCost);
+		fuelLevel = fuelAmount - (mileage / fuelCost); 
 	}
 	
 	public double getFuelAmount() {
+		// 模範解答 return this.fuelAmount;
 		return fuelLevel;
 	}
 }
-
-// 残量　＝　元の量　ー　20/12.5
